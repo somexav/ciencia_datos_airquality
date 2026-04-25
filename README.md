@@ -32,11 +32,6 @@ Países representativos por cluster:
 
 ## EDA — Exploración de datos
 
-### Distribución de variables numéricas
-
-![Histogramas](images/eda_histogramas.png)
-
-Las 12 variables numéricas muestran distribuciones aproximadamente simétricas tras la limpieza. Las líneas roja (media) y naranja (mediana) permiten detectar sesgos remanentes.
 
 ### Outliers (boxplots post-limpieza)
 
@@ -44,11 +39,6 @@ Las 12 variables numéricas muestran distribuciones aproximadamente simétricas 
 
 Se aplicó criterio **3×IQR** para la detección de outliers. Se eliminaron 1 343 filas (3.84 % del total). La variable con más outliers removidos fue `Avg_Life_Expectancy_Index` (261 casos).
 
-### Asimetría (skewness)
-
-![Skewness](images/eda_skewness.png)
-
-Todas las variables quedaron dentro del rango ±1 tras la limpieza, por lo que no se requirió transformación logarítmica para PCA.
 
 ---
 
@@ -114,11 +104,6 @@ El gradiente rojo-verde permite identificar de un vistazo las variables que dife
 
 Las distribuciones de `AQI`, `CO2_Emissions_MT` y `Avg_Life_Expectancy_Index` son las que mejor separan los tres grupos, con rangos intercuartílicos sin solapamiento entre clusters extremos (0 y 2).
 
-### Evolución temporal
-
-![Evolución temporal](images/clusters_evolucion_temporal.png)
-
-La proporción de clusters se mantiene relativamente estable entre 2014 y 2023, lo que sugiere que la calidad del aire no ha cambiado estructuralmente a nivel global en el período analizado.
 
 ---
 
